@@ -12,17 +12,18 @@ export default function Header() {
           height={200}
         />
         <ul className="flex">
-          <li className="cursor-pointer border-b-4 border-green-950 p-3 text-base font-bold text-green-900">
+          <li className="cursor-pointer border-b-4 border-green-900 p-2 text-base font-bold text-green-900">
             Home
           </li>
-          <li className="cursor-pointer p-3 text-base font-bold">Listing</li>
-          <li className="cursor-pointer p-3 text-base font-bold">Company</li>
-          <li className="cursor-pointer p-3 text-base font-bold">About US</li>
-          <li className="cursor-pointer p-3 text-base font-bold">Contact US</li>
+          <li className="cursor-pointer p-2 text-base font-bold">About Us</li>
+          <li className="cursor-pointer p-2 text-base font-bold">
+            Our Products
+          </li>
+          <li className="cursor-pointer p-2 text-base font-bold">Gallery</li>
+          <li className="cursor-pointer p-2 text-base font-bold">Contact Us</li>
         </ul>
-
         <div>
-          <button className="rounded-lg bg-green-950 p-2 font-bold text-white">
+          <button className="rounded-lg bg-green-900 p-2 font-bold text-white">
             Download PDF
           </button>
         </div>
