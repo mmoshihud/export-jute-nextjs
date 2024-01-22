@@ -4,7 +4,7 @@ import Logo from "../../public/munshi-enterprise.png";
 export default function Header() {
   return (
     <>
-      <div className="container mx-auto flex flex-row items-center justify-between">
+      <header className="container mx-auto flex flex-row items-center justify-between bg-white">
         <Image
           src={Logo}
           alt="Munshi Enterprise Logo"
@@ -33,7 +33,7 @@ export default function Header() {
             Download Profile
           </button>
         </div>
-      </div>
+      </header>
     </>
   );
 }

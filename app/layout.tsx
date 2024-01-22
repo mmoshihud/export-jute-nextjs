@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import Footer from "./components/footer";
 import Header from "./components/header";
 import "./globals.css";
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   description: "Farmers' Faith",
 };
 
-const roboto = Open_Sans({
+const open_sans = Open_Sans({
   weight: ["300", "400", "500", "700", "800"],
   style: ["normal", "italic"],
   subsets: ["latin"],
@@ -23,9 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={open_sans.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
