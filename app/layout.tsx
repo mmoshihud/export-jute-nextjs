@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Footer from "./components/footer";
-import Header from "./components/headers";
+import Header from "./components/header";
 import "./globals.css";
 
 export const metadata: Metadata = {

@@ -3,8 +3,8 @@ import Logo from "../../public/munshi-enterprise.png";
 export default function Footer() {
   return (
     <>
-      <footer className=" bg-gray-800 p-12 text-neutral-400">
-        <div className="mb-8 flex items-center justify-around">
+      <footer className="text-neutral-300">
+        <div className="flex items-center justify-around bg-slate-900 p-8">
           <Image
             src={Logo}
             alt="Munshi Enterprise Logo"
@@ -32,7 +32,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-around bg-slate-950 p-8">
           <p className="text-2xl">
             &copy; 2024, Munshi Enterprise Ltd. All rights reserved
           </p>

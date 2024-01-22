@@ -34,6 +34,7 @@ export default function Header() {
           </button>
         </div>
       </header>
+      {/* Our History, Our Team, Our Goal, Membership */}
     </>
   );
 }
