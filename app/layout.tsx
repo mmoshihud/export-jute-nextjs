@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import Header from "./components/Header";
+import { Open_Sans } from "next/font/google";
+import Header from "./components/header";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Munshi Enterprise",
   description: "Farmers' Faith",
 };
+
+const roboto = Open_Sans({
+  weight: ["300", "400", "500", "700", "800"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+});
 
 export default function RootLayout({
   children,
@@ -14,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={roboto.className}>
         <Header />
         {children}
       </body>
