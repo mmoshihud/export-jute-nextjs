@@ -34,9 +34,10 @@ export default function Header() {
             alt="Munshi Enterprise Logo"
             width={250}
             height={250}
+            className="w-2/3 lg:w-full"
           />
         </Link>
-        <ul className="flex">
+        <ul className="hidden lg:flex">
           {navLinks.map((link, index) => (
             <li
               key={index}
@@ -69,7 +70,7 @@ export default function Header() {
           ))}
         </ul>
         <div>
-          <button className="rounded-lg bg-green-900 p-2 font-bold text-white">
+          <button className="hidden rounded-lg bg-green-900 p-2 font-bold text-white lg:block">
             Download Profile
           </button>
         </div>

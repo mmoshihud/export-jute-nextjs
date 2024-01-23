@@ -9,23 +9,25 @@ export default function Home() {
           <div className="relative">
             <Image
               src={Hero}
-              alt="Lorem Enterprise Logo"
+              alt="Munshi Enterprise Logo"
               className="h-full w-full object-cover object-center"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-              <article className="text-7xl text-green-950">
-                Welcome to Lorem Enterprise
+            <div className="absolute inset-0 flex flex-col gap-4 lg:items-center lg:justify-center">
+              <article className="text-2xl text-green-700 lg:text-7xl lg:text-green-950">
+                Welcome to Munshi Enterprise
               </article>
-              <p className="text-3xl text-white">
+              <p className="text-2xl text-blue-400 lg:text-3xl lg:text-white">
                 A <span className="italic">beau</span> approach to
                 diversification
               </p>
             </div>
           </div>
         </div>
-        <div className="container mx-auto flex flex-col items-center py-8">
-          <h1 className="mb-8 text-3xl">How it works</h1>
-          <p className="text-2xl italic">
+        <div className="container mx-auto flex flex-col items-center px-8 py-8 lg:px-32">
+          <h1 className="mb-8 text-3xl text-gray-700 lg:text-4xl">
+            How it works
+          </h1>
+          <p className="text-center text-2xl italic text-gray-700 lg:text-justify lg:text-3xl">
             In the serene twilight, a solitary figure traversed the ancient
             forest, where whispered secrets lingered in the rustling leaves.
             Moonlight spilled through the dense canopy, illuminating a path

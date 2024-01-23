@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer className="text-neutral-300">
-        <div className="flex items-center justify-around bg-slate-900 p-8">
+        <div className="flex flex-col items-start justify-center gap-y-8 bg-slate-900 p-8 lg:flex-row lg:items-center lg:justify-around">
           <Image
             src={Logo}
             alt="Munshi Enterprise Logo"
@@ -13,30 +13,30 @@ export default function Footer() {
             className="bg-white"
           />
           <div>
-            <h1>Contact Info</h1>
+            <h1 className="mb-4 text-2xl font-semibold">Contact Info</h1>
             <ul>
-              <li>Dhanmondi, Dhaka-1209</li>
-              <li>+880 1712345880</li>
-              <li>abc@gmail.com</li>
-              <li>www.munshient.com</li>
+              <li className="text-lg">Dhanmondi, Dhaka-1209</li>
+              <li className="text-lg">+880 1712345880</li>
+              <li className="text-lg">abc@gmail.com</li>
+              <li className="text-lg">www.munshient.com</li>
             </ul>
           </div>
           <div>
-            <h1>Company</h1>
+            <h1 className="mb-4 text-2xl font-semibold">Company</h1>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Our</li>
-              <li>Gallery</li>
-              <li>Contact</li>
+              <li className="text-lg">Home</li>
+              <li className="text-lg">About</li>
+              <li className="text-lg">Our</li>
+              <li className="text-lg">Gallery</li>
+              <li className="text-lg">Contact</li>
             </ul>
           </div>
         </div>
-        <div className="flex items-center justify-around bg-slate-950 p-8">
-          <p className="text-2xl">
-            &copy; 2024, Munshi Enterprise Ltd. All rights reserved
+        <div className="flex flex-col items-center justify-around bg-slate-950 p-8 lg:flex-row">
+          <p className="text-xs lg:text-lg">
+            &copy; 2024, Munshi Enterprise. All rights reserved
           </p>
-          <div className="flex">
+          <div className="flex gap-x-4">
             <p>logo</p>
             <p>logo</p>
           </div>
