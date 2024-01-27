@@ -2,9 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
+import Close from "../../public/close.svg";
+import Menu from "../../public/menu.svg";
 import Logo from "../../public/munshi-enterprise.png";
-
 export default function Header() {
   const navLinks = [
     { name: "Home", href: "/", dropDownMenu: false },
@@ -24,17 +25,17 @@ export default function Header() {
     { name: "Contact Us", href: "/contact", dropDownMenu: false },
   ];
   const pathname = usePathname();
+  const [toggle, setToggle] = useState(false);
 
   return (
     <>
-      <header className="container mx-auto flex flex-row items-center justify-between bg-white">
+      <div className="flex items-center justify-between bg-white px-4 lg:container lg:mx-auto lg:flex">
         <Link href={"/"}>
           <Image
             src={Logo}
             alt="Munshi Enterprise Logo"
             width={250}
             height={250}
-            className="w-2/3 lg:w-full"
           />
         </Link>
         <ul className="hidden lg:flex">
@@ -69,12 +70,52 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <div>
-          <button className="hidden rounded-lg bg-green-900 p-2 font-bold text-white lg:block">
-            Download Profile
-          </button>
+        <button className="hidden rounded-lg bg-green-900 p-2 font-bold text-white lg:block">
+          Download Profile
+        </button>
+        <div className="items-center justify-end lg:hidden">
+          <Image
+            src={toggle ? Close : Menu}
+            alt="Navbar Button"
+            className="h-8 w-8 rounded-md bg-green-950 object-contain p-1"
+            onClick={() => setToggle((prevState) => !prevState)}
+          />
         </div>
-      </header>
+      </div>
+      <ul
+        className={`w-full bg-white p-4 md:hidden ${toggle ? "block" : "hidden"}`}
+      >
+        {navLinks.map((link, index) => (
+          <li
+            key={index}
+            className={`cursor-pointer p-2 text-base font-bold ${
+              link.href === "/"
+                ? pathname === "/"
+                  ? "text-green-900"
+                  : "text-gray-700 hover:border-green-900 hover:text-green-900"
+                : pathname.startsWith(link.href)
+                  ? "text-green-900"
+                  : "text-gray-700 hover:border-green-900 hover:text-green-900"
+            }`}
+          >
+            <Link href={link.href}>{link.name}</Link>
+            {link.dropDownMenu && (
+              <ul className="mt-2 w-56 focus:outline-none">
+                {link.dropDrown?.map(
+                  (subMenu: any, index: number): ReactElement => (
+                    <li
+                      key={index}
+                      className="block p-2 text-base text-gray-700 hover:text-green-900"
+                    >
+                      {subMenu.name}
+                    </li>
+                  ),
+                )}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

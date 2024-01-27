@@ -12,11 +12,11 @@ export default function Home() {
               alt="Munshi Enterprise Logo"
               className="h-full w-full object-cover object-center"
             />
-            <div className="absolute inset-0 flex flex-col gap-4 lg:items-center lg:justify-center">
-              <article className="text-2xl text-green-700 lg:text-7xl lg:text-green-950">
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+              <article className="text-2xl text-green-950 lg:text-7xl">
                 Welcome to Munshi Enterprise
               </article>
-              <p className="text-2xl text-blue-400 lg:text-3xl lg:text-white">
+              <p className="text-xl text-blue-950 lg:text-4xl">
                 A <span className="italic">beau</span> approach to
                 diversification
               </p>
