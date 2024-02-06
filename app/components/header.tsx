@@ -6,6 +6,7 @@ import { ReactElement, useState } from "react";
 import Close from "../../public/close.svg";
 import Menu from "../../public/menu.svg";
 import Logo from "../../public/munshi-enterprise.png";
+
 export default function Header() {
   const navLinks = [
     { name: "Home", href: "/", dropDownMenu: false },
